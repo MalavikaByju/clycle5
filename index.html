@@ -213,5 +213,39 @@
     </footer>
 
     <script src="app.js" defer></script>
+    <section id="add-listing">
+  <h2>Add a Listing</h2>
+  <form id="listingForm">
+    <input type="text" id="title" placeholder="Item Title" required />
+    <textarea id="description" placeholder="Description" required></textarea>
+    <button type="submit">Add Listing</button>
+  </form>
+  <p id="formStatus"></p>
+</section>
+    <script>
+  const form = document.getElementById("listingForm");
+  const status = document.getElementById("formStatus");
+
+  form.addEventListener("submit", async (e) => {
+    e.preventDefault();
+
+    const title = document.getElementById("title").value;
+    const description = document.getElementById("description").value;
+
+    try {
+      await db.collection("listings").add({
+        title,
+        description,
+        timestamp: firebase.firestore.FieldValue.serverTimestamp()
+      });
+      status.textContent = "✅ Listing added!";
+      form.reset();
+    } catch (error) {
+      console.error("Error adding listing:", error);
+      status.textContent = "❌ Failed to add listing.";
+    }
+  });
+</script>
+
 </body>
 </html>
