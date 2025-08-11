@@ -22,9 +22,9 @@ const PRODUCTS = [
         availability: 'available',
         specs: ['2mm thickness', 'Non-slip surface', 'Eco-friendly TPE material', '183cm x 61cm'],
         images: [
-            'https://live.staticflickr.com/65535/54713637664_cbbba9da65_s.jpg?text=Yoga+Mat',
-            'https://live.staticflickr.com/65535/54713637659_dc7185bc43_s.jpg?text=Yoga+Mat+Detail+1',
-            'https://live.staticflickr.com/65535/54713619933_7509bd8c7d_s.jpg?text=Yoga+Mat+Detail+2'
+            'https://live.staticflickr.com/65535/54713637664_cbbba9da65_m.jpg?text=Yoga+Mat',
+            'https://live.staticflickr.com/65535/54713637659_dc7185bc43_m.jpg?text=Yoga+Mat+Detail+1',
+            'https://live.staticflickr.com/65535/54713619933_7509bd8c7d_m.jpg?text=Yoga+Mat+Detail+2'
         ],
         alt: 'Premium pink yoga mat with non-slip surface',
         description: 'High-quality yoga mat perfect for all types of yoga practice. Features excellent grip and cushioning.',
