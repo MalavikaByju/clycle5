@@ -62,7 +62,7 @@ function sortProducts(products,sortBy){const sorted=[...products];switch(sortBy)
 function renderProductCard(product,index=0){const isInWishlist=wishlist.includes(product.id);const isInCart=cart.some(item=>item.id===product.id);return `
         <div class="product-card" style="animation-delay: ${index * 0.1}s" data-product-id="${product.id}">
             <div class="product-image">
-                <img src="${product.images[0]}" alt="${product.alt}" loading="lazy">
+                <img src="${product.images[0]}" alt="${product.alt}">
                 <div class="product-overlay"></div>
                 <div class="product-actions">
                     <button class="btn btn-secondary btn-sm wishlist-btn ${isInWishlist ? 'active' : ''}" 
